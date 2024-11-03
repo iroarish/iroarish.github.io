@@ -1,73 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="CSS/design.css">
-    <link rel="stylesheet" href="asset/icons/css/font-awesome.min.css">
+    <meta charset='utf-8'>
+    <title>Email Verified</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 150%;
+        }
+        p {
+            text-align: center;
+            font-size: 100%;
+        }
+        body {
+            background-color: rgba(116, 165, 207, 0.425);
+            padding-top: 10%;
+        }
+        .confirmationcard {
+            background-color: aliceblue; 
+            width: 70%; 
+            margin: auto; 
+            padding-bottom: 1em;
+            border-radius: 25px;
+        }
+        .logo{
+            width: 25%; 
+            margin-left: auto; 
+            margin-right: auto; 
+            display: block;
+        }
+        .checkmark__circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            stroke: #7ac142;
+            fill: none;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+
+        .checkmark {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 2;
+            stroke: #fff;
+            stroke-miterlimit: 10;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: inset 0px 0px 0px #7ac142;
+            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+        }
+
+        .checkmark__check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+        }
+
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+        @keyframes scale {
+            0%, 100% {
+                transform: none;
+            }
+            50% {
+                transform: scale3d(1.1, 1.1, 1);
+            }
+        }
+        @keyframes fill {
+            100% {
+                box-shadow: inset 0px 0px 0px 30px #7ac142;
+            }
+        } 
+        @media screen and (max-width: 1000px) {
+            .confirmationcard {
+                width: 25em;
+                height: 30em;
+                padding-bottom: 3em;
+            }
+            .logo {
+                width: 20em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="main">
-        <div class="navbar">
-            <p style="padding-right: 10px;">
-                Contact:
-            </p>
-            <a href="https://github.com/iroarish">
-                <p>
-                    Github
-                </p>
-            </a>
+    <div class="confirmationcard">
+        <div>
+            <img src="assets/newlogo.png" class="logo">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+            <h1>Your Email is now Verified!</h1>
         </div>
-        <div id="myHeader">
-            <div class="right-header">
-                <img src="asset/gifs/hsr-honkai-star-rail.gif" alt="Firefly Spinning" style="min-width: 12px;max-width: 80%;height:auto;">
-            </div>
-            <div class="main-header">
-                <h1>
-                    Hi, my name is Brian Isaac.
-                </h1>
-                <p>
-                    A 2nd year BSIT Student enrolled in University of Pangasinan.
-                </p>
-            </div>
-        </div>
-        <div class="content-container">
-            <div style="text-align: center;">
-                <p>Scroll</p>
-            </div>
-            <div class="line"></div>
-            <div style="width: 50%">
-                <h1>
-                    About Me
-                </h1>
-                <p>
-                    I aspire to be a Game Developer and an artist. Building and creating something is my passion. I want to see people enjoy what I made. I love playing games.
-                </p>
-            </div>
-            <div style="padding: 4%;"></div>
-            <div>
-                <h1>
-                    My Projects
-                </h1>
-            </div>
-            <div style="padding: 1%;"></div>
-            <div class="rows">
-                <div class="cols">
-                    <img src="asset/photos/surviving-pic-itwars.png" alt="Surviving Pic of my game ITwars" style="min-width: 250px;max-width: 80%;height:auto;">
-                    <h1>
-                        ITwars
-                    </h1>
-                    <p>
-                        Game made in Java. The goal is to defeat incoming enemies (viruses, trojan, malware) that attacks the school's computer
-                    </p>
-                </div>
-                <div class="cols">
-                    <h1>
-                        Many more project to come!
-                    </h1>
-                </div>
-            </div>
+        <div>
+            <p>Thank you for registering in Travel Go. You can now go back to the app to login your account.</h3>
         </div>
     </div>
 </body>

@@ -2,108 +2,121 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <title>Email Verified</title>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Valentine's Invitation</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <style>
-        h1 {
-            text-align: center;
-            font-size: 150%;
-        }
-        p {
-            text-align: center;
-            font-size: 100%;
+        @font-face {
+            font-family: "Valentine Font";
+            src: url(fonts/Lovely\ Valentine\ Script.ttf) format("truetype");
         }
         body {
-            background-color: rgba(116, 165, 207, 0.425);
-            padding-top: 10%;
+            background-color: #FFDEE3;
+            align-items: center;
+            
         }
-        .confirmationcard {
-            background-color: aliceblue; 
-            width: 70%; 
-            margin: auto; 
-            padding-bottom: 1em;
+        div.card {
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2vw;
+            overflow-x: auto;
+            height: 45vw;
+            width: 80%;
+            text-align: center;
+            align-items: center;
+            background-image: url(Background.png);
+            background-position-y: center;
+            background-position-x: center;
+            background-size: contain;
             border-radius: 25px;
         }
-        .logo{
-            width: 25%; 
-            margin-left: auto; 
-            margin-right: auto; 
-            display: block;
+        div.description {
+            text-align: center;
+            margin-bottom: 30px;
         }
-        .checkmark__circle {
-            stroke-dasharray: 166;
-            stroke-dashoffset: 166;
-            stroke-width: 2;
-            stroke-miterlimit: 10;
-            stroke: #7ac142;
-            fill: none;
-            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        div.left {
+            float: left;
+            width: 50%;
+            height: 160px;
         }
+        div.right {
 
-        .checkmark {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            display: block;
-            stroke-width: 2;
-            stroke: #fff;
-            stroke-miterlimit: 10;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: inset 0px 0px 0px #7ac142;
-            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+            height: 160px;
         }
-
-        .checkmark__check {
-            transform-origin: 50% 50%;
-            stroke-dasharray: 48;
-            stroke-dashoffset: 48;
-            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+        h1.valentine{
+            padding-top: 10%;
+            margin-bottom: 150px;
+            font-size: 5em;
+            color: #FFDEE3;
+            font-family: "Valentine Font", Verdana, Tahoma;
         }
-
-        @keyframes stroke {
-            100% {
-                stroke-dashoffset: 0;
-            }
+        h2{
+            color: #FFDEE3;
         }
-        @keyframes scale {
-            0%, 100% {
-                transform: none;
-            }
-            50% {
-                transform: scale3d(1.1, 1.1, 1);
-            }
+        p, h4 {
+            color: #FFDEE3;
         }
-        @keyframes fill {
-            100% {
-                box-shadow: inset 0px 0px 0px 30px #7ac142;
-            }
-        } 
-        @media screen and (max-width: 1000px) {
-            .confirmationcard {
-                width: 25em;
-                height: 30em;
-                padding-bottom: 3em;
-            }
-            .logo {
-                width: 20em;
-            }
+        button {
+            border: 0;
+            border-radius: 15px;
+            background-color: #ff333357;
+            font-size: 1em;
+            height: 50px;
+            width: 50%;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="confirmationcard">
-        <div>
-            <img src="assets/newlogo.png" class="logo">
-            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
-                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-            </svg>
-            <h1>Your Email is now Verified!</h1>
+    <div class="card">
+        <h1 class="valentine">
+            Happy <br>
+            Valentine's <br>
+            Day
+        </h1>
+        <p>
+            I know this is late but...
+        </p>
+        <h2>
+            Will you be my valentine's date?
+        </h2>
+        <div class="description" style="margin-bottom: 80;">
+            <div class="left">
+                <h2>
+                    When...
+                </h2>
+                <p>
+                    February 14, 2025 After Exams
+                </p>
+            </div>
+            <div class="right">
+                <h2>
+                    Where...
+                </h2>
+                <p style="text-align: justify;">
+                    Nakasort kung paano ang flow if puno ang tao =( <br><br>
+                    1. SM Dagupan, Bon Chon <br>
+                    2. SM Dagupan, Zarks Burger ps. para matuloy ang burger date <br>
+                    3. SM Dagupan, Point and Grill <br>
+                    4. San Jacinto, Kohi <br>
+                    5. San Jacinto, Green Bushes ps. Hopefully bukas pa siya if puno talaga lahat<br>
+                </p>
+            </div>
         </div>
-        <div>
-            <p>Thank you for registering in Travel Go. You can now go back to the app to login your account.</h3>
-        </div>
+        <a href="accepted.html">
+            <button>
+                <p>
+                    Yes, I accept your offer!!
+                </p>
+            </button>
+        </a>
+        <a href="./denied.html">
+            <button>
+                <p>
+                    No, Too late na....
+                </p>
+            </button>
+        </a>
     </div>
 </body>
 </html>
